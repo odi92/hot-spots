@@ -29,7 +29,7 @@ export default async function FriendsPage() {
         <div className="px-4 pb-2">
           <h1 className="text-lg font-bold text-[#1a1a1a] md:text-xl">All friends</h1>
         </div>
-        <FriendsClient friends={[]} />
+        <FriendsClient friends={[]} reviewsByLocation={{}} />
       </div>
     )
   }
