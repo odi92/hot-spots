@@ -36,7 +36,9 @@ export default async function ProfilePage() {
 
   const trips = (tripsData ?? []) as TripWithLocation[]
   const currentTrip = trips.find((t) => t.is_current)
-  const incomingRequests = (requestsData ?? []) as { id: string; requester: Profile }[]
+  const incomingRequests = (requestsData ?? [] as { id: string; requester: Profile[] }[])
+    .filter((r) => r.requester?.[0])
+    .map((r) => ({ id: r.id, requester: r.requester[0] }))
   const friendIds = (friendshipsData ?? []).map((f) =>
     f.requester_id === user.id ? f.addressee_id : f.requester_id
   )
