@@ -18,10 +18,10 @@ export type FriendWithTrips = {
 
 type Props = {
   friends: FriendWithTrips[]
-  reviewsByLocation: Record<string, FriendReview[]>
+  reviewsByLocation?: Record<string, FriendReview[]>
 }
 
-export default function FriendsClient({ friends, reviewsByLocation }: Props) {
+export default function FriendsClient({ friends, reviewsByLocation = {} }: Props) {
   const [query, setQuery] = useState('')
 
   const filtered = query.trim().length === 0
