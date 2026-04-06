@@ -1,0 +1,21 @@
+{
+  "name": "Hot Spots",
+  "short_name": "Hot Spots",
+  "description": "See where your friends are traveling and discover hot spots.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9f9f7",
+  "theme_color": "#ff5a1f",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
